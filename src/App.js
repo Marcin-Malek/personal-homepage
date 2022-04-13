@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { useSelector } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
+import About from './About';
+import { GlobalStyle } from './GlobalStyle';
+import { selectTheme } from './slice';
+import { lightTheme, darkTheme } from './theme';
 
 function App() {
+  const theme = useSelector(selectTheme);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <GlobalStyle />
+      <About />
+    </ThemeProvider>
   );
 }
 
