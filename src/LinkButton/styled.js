@@ -16,7 +16,7 @@ export const StyledButton = styled.a`
     cursor: pointer;
     color: white;
     background-color: ${({ theme }) => theme.fillColor.main};
-    border: 1px solid ${({ theme }) => theme.borderColor.button};
+    border: 1px solid ${({ theme }) => theme.borderColor};
     transition: ${({theme}) => theme.transition};
 
     &:hover {

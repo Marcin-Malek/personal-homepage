@@ -7,7 +7,7 @@ import {
     Description,
 } from "./styled";
 import ThemeSwitch from "./ThemeSwitch";
-import LinkButton from "../Button";
+import LinkButton from "../LinkButton";
 
 const About = () => (
         <Wrapper>

@@ -1,7 +1,5 @@
 const commonProperties = {
-  borderColor: {
-    button: "#D1D5DA4D",
-  },
+  borderColor: "#D1D5DA4D",
   transition: "1s cubic-bezier(0.69, 0.15, 0.31, 0.85)",
   breakpoints: {
     mobile: 767
