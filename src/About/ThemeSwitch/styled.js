@@ -55,10 +55,9 @@ export const BrightnessIcon = styled(Icon)`
     background-color: ${({ theme }) => theme.fillColor.textSecondary};
     transition: ${({ theme }) => theme.transition};
     border-radius: 50%;
-    transform: rotate(0.01deg);
 
     ${({ $themeType }) => $themeType === "dark" && css`
-        transform: translate(20px) rotate(360deg);
+        transform: translate(20.5px, 0.4px) rotate(180deg);
         & path {
             fill: ${({ theme }) => theme.fillColor.background};
         }
