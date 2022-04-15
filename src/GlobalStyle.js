@@ -15,6 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 119px 14px 109px;
     margin: auto;
     background-color: ${({theme}) => theme.fillColor.background};
-    transition: background-color 1s;
+    color: ${({theme}) => theme.fillColor.textPrimary};
+    transition: background-color ${({theme}) => theme.transition};
     }
 `;

@@ -1,15 +1,23 @@
-import { Caption, Header, Image, Wrapper } from "./styled";
+import envelopeIcon from "../img/envelope.svg";
+import {
+    Wrapper,
+    Image,
+    Caption,
+    Header,
+    Description,
+} from "./styled";
 import ThemeSwitch from "./ThemeSwitch";
+import LinkButton from "../Button";
 
-const About = () => {
-    return (
+const About = () => (
         <Wrapper>
-            <Image alt="Marcin Małek"/>
+            <Image alt="Marcin Małek" />
             <ThemeSwitch />
             <Caption>I am</Caption>
             <Header>Marcin Małek</Header>
+            <Description>An enthusiastic programmer, who is currently looking for new job opportunities.</Description>
+            <LinkButton link="mailto:marcinmalek01@gmail.com" img={envelopeIcon} text="Hire me" />
         </Wrapper>
     );
-}
 
 export default About;

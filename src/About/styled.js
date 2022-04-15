@@ -37,5 +37,15 @@ export const Header = styled.h1`
     font-size: 38px;
     line-height: 46px;
     letter-spacing: 0.05em;
-    color: ${({ theme }) => theme.fillColor.textPrimary};
+    margin: 12px 0 35px;
+`;
+
+export const Description = styled.span`
+    grid-area: description;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    margin-bottom: 32px;
+    color: ${({theme}) => theme.fillColor.textSecondary};
 `;
