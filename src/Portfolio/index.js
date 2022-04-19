@@ -9,12 +9,9 @@ import {
     Header,
     Caption,
     PortfolioList,
-    ListItem,
-    ItemHeader,
-    ItemDescription,
-    ItemLink,
     StyledWarningIcon,
 } from "./styled";
+import Card from "./Card";
 
 
 const Portfolio = () => {
@@ -47,12 +44,13 @@ const Portfolio = () => {
                 <Caption>My recent projects</Caption>
                 <PortfolioList>
                     {data.map((item) => (
-                        <ListItem key={item.id}>
-                            <ItemHeader>{item.name}</ItemHeader>
-                            <ItemDescription>Description it is.</ItemDescription>
-                            <ItemLink>Demo: <a href={item.homepage}>{item.homepage}</a></ItemLink>
-                            <ItemLink>Code: <a href={item.html_url}>{item.html_url}</a></ItemLink>
-                        </ListItem>
+                        <Card
+                            key={item.id}
+                            header={item.name}
+                            description={item.description}
+                            homepage={item.homepage}
+                            repository={item.html_url}
+                        />
                     ))}
                 </PortfolioList>
             </Wrapper>
