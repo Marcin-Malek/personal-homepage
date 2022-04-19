@@ -36,7 +36,7 @@ const Portfolio = () => {
             </Wrapper>
         );
 
-    } else if (fetchState === "resolved" && data instanceof Array) {
+    } else if (fetchState === "resolved" && data instanceof Array && data.length > 0) {
         return (
             <Wrapper>
                 <HeaderIcon />
@@ -56,7 +56,20 @@ const Portfolio = () => {
             </Wrapper>
         );
 
-    } else if (fetchState === "rejected" || !(data instanceof Array)) {
+    } else if (fetchState === "resolved" && data instanceof Array && !data.length > 0) {
+        return (
+            <Wrapper>
+                <HeaderIcon />
+                <Header>Portfolio</Header>
+                <Caption>My recent projects</Caption>
+                <Info
+                    header="Sorry! It looks like it's empty..."
+                    text="Apparently I dont have any public repositories to show you right now."
+                />
+            </Wrapper>
+        );
+
+    } else {
         return (
             <Wrapper>
                 <HeaderIcon />
