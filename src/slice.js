@@ -1,6 +1,10 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = { theme: "light" }
+const initialState = {
+    theme: "light",
+    fetchState: undefined,
+    githubRepos: undefined,
+};
 
 const globalSlice = createSlice({
     name: 'global',
@@ -9,11 +13,27 @@ const globalSlice = createSlice({
         toggleDarkTheme(state) {
             state.theme === "light" ? state.theme = "dark" : state.theme = "light";
         },
-    },
-})
+        fetchGithubRepos: () => { },
+        setFetchState: (state, { payload }) => {
+            state.fetchState = payload;
+        },
+        setGithubRepos: (state, { payload }) => {
+            state.githubRepos = payload;
+        },
+    }
+});
 
-export const { toggleDarkTheme } = globalSlice.actions
+export const {
+    toggleDarkTheme,
+    fetchGithubRepos,
+    setFetchState,
+    setGithubRepos,
+} = globalSlice.actions;
 
 export const selectTheme = state => state.theme;
 
-export default globalSlice.reducer
+export const selectFetchState = state => state.fetchState;
+
+export const selectGithubRepos = state => state.githubRepos;
+
+export default globalSlice.reducer;
