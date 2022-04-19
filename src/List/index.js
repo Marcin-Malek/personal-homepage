@@ -1,8 +1,8 @@
 import { ListWrapper, ListHeader, StyledList, ListItem, StyledMarker } from "./styled";
 
-const List = ({ title, titleIcon, content }) => (
+const List = ({ title, content }) => (
     <ListWrapper>
-        <ListHeader>{title}{titleIcon}</ListHeader>
+        <ListHeader>{title}</ListHeader>
         <StyledList>
             {content.map((item, index) => (
                 <ListItem key={index}>

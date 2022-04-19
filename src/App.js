@@ -6,6 +6,7 @@ import { selectTheme } from './slice';
 import About from './About';
 import List from './List';
 import { skillsList, toLearnList } from './List/contents';
+import Portfolio from './Portfolio';
 
 function App() {
   const theme = useSelector(selectTheme);
@@ -15,15 +16,14 @@ function App() {
       <GlobalStyle />
       <About />
       <List
-        title="My skillset includes "
-        titleIcon={<span style={{ fontSize: `24px` }}>🛠️</span>}
+        title={<>My skillset includes <span style={{ fontSize: `24px` }}>🛠️</span></>}
         content={skillsList}
       />
       <List
-        title="What i want to learn next "
-        titleIcon={<span style={{ fontSize: `24px` }}> 🚀</span>}
+        title={<>What i want to learn next <span style={{ fontSize: `24px` }}>🚀</span></>}
         content={toLearnList}
       />
+      <Portfolio />
     </ThemeProvider>
   );
 }
