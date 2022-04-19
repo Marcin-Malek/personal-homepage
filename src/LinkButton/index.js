@@ -1,11 +1,9 @@
-import { Icon, StyledButton } from "./styled";
+import { StyledButton } from "./styled";
 
 const LinkButton = ({ link, img, text }) => {
     return (
-        <StyledButton href={link}>
-            <Icon img={img}/>{text}
-        </StyledButton>
-    );
+        <StyledButton href={link}>{img}{text}</StyledButton>
+        );
 }
 
 export default LinkButton;

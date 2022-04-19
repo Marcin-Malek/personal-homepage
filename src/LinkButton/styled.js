@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const StyledButton = styled.a`
     grid-area: button;
@@ -17,7 +17,7 @@ export const StyledButton = styled.a`
     color: white;
     background-color: ${({ theme }) => theme.fillColor.main};
     border: 1px solid ${({ theme }) => theme.borderColor};
-    transition: ${({theme}) => theme.transition};
+    transition: ${({ theme }) => theme.transition};
 
     &:hover {
         box-shadow: ${({ theme }) => theme.shadow.buttonFocus};
@@ -31,13 +31,4 @@ export const StyledButton = styled.a`
         box-shadow: ${({ theme }) => theme.shadow.buttonFocus};
         outline: none;
     }
-`;
-
-export const Icon = styled.svg`
-    ${({ img }) => img && css`
-        background-image: ${({ img }) => `url(${img})`};
-        width: 24px;
-        height: 24px;
-        margin-right: 16px;
-    `}
 `;
