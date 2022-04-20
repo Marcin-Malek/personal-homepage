@@ -17,11 +17,11 @@ function App() {
       <GlobalStyle />
       <About />
       <List
-        title={<>My skillset includes <span style={{ fontSize: `24px` }}>🛠️</span></>}
+        title={<>My skillset includes <span style={{ fontSize: `0.8em` }}>🛠️</span></>}
         content={skillsList}
       />
       <List
-        title={<>What i want to learn next <span style={{ fontSize: `24px` }}>🚀</span></>}
+        title={<>What i want to learn next <span style={{ fontSize: `0.8em` }}>🚀</span></>}
         content={toLearnList}
       />
       <Portfolio />
