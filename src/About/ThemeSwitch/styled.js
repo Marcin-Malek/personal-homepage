@@ -13,6 +13,10 @@ export const Label = styled.label`
     line-height: 130%;
     text-transform: uppercase;
     color: ${({ theme }) => theme.fillColor.textSecondary};
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        font-size: 0;
+    }
 `;
 
 export const Switch = styled.span`

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.section`
+export const Wrapper = styled.header`
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-template-areas: 
@@ -11,7 +11,17 @@ export const Wrapper = styled.section`
         "image button"
         "image empty";
     column-gap: 72px;
-    margin-bottom: 72px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        grid-template-columns: minmax(128px, 1fr) 1fr;
+        grid-template-areas: 
+        "image switch"
+        "caption caption"
+        "header header"
+        "description description"
+        "button button";
+        column-gap: 0;
+    }
 `;
 
 export const Image = styled.img`
@@ -20,6 +30,14 @@ export const Image = styled.img`
     border-radius: 50%;
     background-color: black;
     grid-area: image;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        width: unset;
+        height: unset;
+        max-width: 384px;
+        aspect-ratio: 1;
+        margin-bottom: 16px;
+    }
 `;
 
 export const Caption = styled.span`
@@ -38,14 +56,25 @@ export const Header = styled.h1`
     line-height: 46px;
     letter-spacing: 0.05em;
     margin: 12px 0 35px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        font-size: 22px;
+        line-height: 27px;
+        margin: 8px 0 16px;
+    }
 `;
 
-export const Description = styled.span`
+export const Description = styled.p`
     grid-area: description;
     font-weight: 400;
     font-size: 20px;
     line-height: 140%;
     letter-spacing: 0.05em;
-    margin-bottom: 32px;
+    margin: 0 0 32px;
     color: ${({theme}) => theme.fillColor.textSecondary};
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        font-size: 17px;
+        margin: 0 0 24px;
+    }
 `;
