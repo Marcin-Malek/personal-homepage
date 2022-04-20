@@ -8,6 +8,7 @@ export const skillsList = [
     "React",
     "React Hooks",
     "React Router",
+    "styled-components",
     "Redux (Toolkit)",
     "Redux-Saga",
     "Promises, Async/Await",
