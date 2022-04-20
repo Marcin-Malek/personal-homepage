@@ -24,7 +24,7 @@ export const skillsList = [
     "Responsive Web Design",
     "Java (Basic knowledge)",
     "Matlab (Basic knowledge)",
-    "Android Studio",
+    "Android SDK",
     "Firebase",
   ];
 
@@ -34,4 +34,5 @@ export const skillsList = [
       "Wordpress",
       "C++",
       "VST Programming",
+      "Software testing",
   ];
