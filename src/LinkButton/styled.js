@@ -17,7 +17,7 @@ export const StyledButton = styled.a`
     color: white;
     background-color: ${({ theme }) => theme.fillColor.main};
     border: 1px solid ${({ theme }) => theme.borderColor};
-    transition: ${({ theme }) => theme.transition};
+    transition: box-shadow ${({ theme }) => theme.transition};
 
     &:hover {
         box-shadow: ${({ theme }) => theme.shadow.buttonFocus};
@@ -30,5 +30,10 @@ export const StyledButton = styled.a`
     &:focus-visible {
         box-shadow: ${({ theme }) => theme.shadow.buttonFocus};
         outline: none;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        font-size: 18px;
+        line-height: 140%;
     }
 `;
