@@ -60,8 +60,11 @@ export const IconLink = styled.a`
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
-        width: 32px;
-        height: 32px;
         margin-right: 16px;
+        
+        & svg {
+            width: 32px;
+            height: 32px;
+        }
     }
 `;
