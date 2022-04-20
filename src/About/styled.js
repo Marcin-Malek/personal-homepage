@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.header`
     display: grid;
-    grid-template-columns: min-content 1fr;
+    grid-template-columns: max-content 1fr;
     grid-template-areas: 
         "image switch"
         "image caption"
@@ -25,17 +25,13 @@ export const Wrapper = styled.header`
 `;
 
 export const Image = styled.img`
-    width: 384px;
-    height: 384px;
+    max-width: 384px;
+    width: 100%;
+    height: auto;
     border-radius: 50%;
-    background-color: black;
     grid-area: image;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
-        width: unset;
-        height: unset;
-        max-width: 384px;
-        aspect-ratio: 1;
         margin-bottom: 16px;
     }
 `;

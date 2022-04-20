@@ -8,10 +8,11 @@ import {
 } from "./styled";
 import ThemeSwitch from "./ThemeSwitch";
 import LinkButton from "../LinkButton";
+import photo from "../img/photo.jpg";
 
 const About = () => (
     <Wrapper>
-        <Image alt="Marcin Małek" />
+        <Image src={photo} alt="Marcin Małek" />
         <ThemeSwitch />
         <Caption>I am</Caption>
         <Header>Marcin Małek</Header>
