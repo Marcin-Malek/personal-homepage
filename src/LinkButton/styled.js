@@ -13,7 +13,6 @@ export const StyledButton = styled.a`
     line-height: 24px;
     letter-spacing: 0.05em;
     user-select: none;
-    cursor: pointer;
     color: white;
     background-color: ${({ theme }) => theme.fillColor.main};
     border: 1px solid ${({ theme }) => theme.borderColor};
