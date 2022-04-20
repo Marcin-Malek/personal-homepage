@@ -17,5 +17,9 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${({theme}) => theme.fillColor.background};
     color: ${({theme}) => theme.fillColor.textPrimary};
     transition: background-color ${({theme}) => theme.transition};
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) { 
+        padding: 32px 14px;
+    }
     }
 `;
