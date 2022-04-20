@@ -20,8 +20,8 @@ export const ListHeader = styled.h2`
 `;
 
 export const StyledList = styled.ul`
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 0;
     margin: 24px 0 0 0;
     list-style-type: none;
@@ -29,19 +29,19 @@ export const StyledList = styled.ul`
 
 export const StyledMarker = styled(Marker)`
     margin-right: 15px;
-    margin-bottom: 1px;
+    flex-shrink: 0;
     & circle {
         fill: ${({theme}) => theme.fillColor.main};
     }
 `;
 
 export const ListItem = styled.li`
-    flex-grow: 0;
-    flex-basis: 33.33%;
+    display: inline-flex;
+    align-items: center;
     font-weight: 400;
     font-size: 18px;
     line-height: 140%;
     letter-spacing: 0.05em;
-    margin-top: 8px;
+    padding: 4px;
     color: ${({theme}) => theme.fillColor.textSecondary};
 `;
