@@ -6,10 +6,14 @@ export const StyledCard = styled.li`
     box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02), 0px 16px 58px rgba(9, 10, 51, 0.03);
     border-radius: 4px;
     padding: 56px;
-    transition: ${({ theme }) => theme.transition};
+    transition: border-color ${({ theme }) => theme.transition};
 
     &:hover {
         border-color: #0366D633;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        padding: 24px;
     }
 `;
 
@@ -20,6 +24,12 @@ export const CardHeader = styled.h3`
     letter-spacing: 0.05em;
     color: ${({ theme }) => theme.fillColor.main};
     margin: 0 0 24px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        font-size: 16px;
+        line-height: 19px;
+        margin: 0 0 16px;
+    }
 `;
 
 export const CardDescription = styled.p`
@@ -29,6 +39,12 @@ export const CardDescription = styled.p`
     letter-spacing: 0.05em;
     color: ${({ theme }) => theme.fillColor.textSecondary};
     margin: 24px 0;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        font-size: 14px;
+        line-height: 17px;
+        margin: 16px 0;
+    }
 `;
 
 export const CardLink = styled.p`
@@ -37,5 +53,11 @@ export const CardLink = styled.p`
     line-height: 140%;
     letter-spacing: 0.05em;
     color: ${({ theme }) => theme.fillColor.textSecondary};
-    margin: 8px 0;
+    margin: 8px 0 0;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        font-size: 14px;
+        line-height: 17px;
+        margin: 10px 0 0;
+    }
 `;

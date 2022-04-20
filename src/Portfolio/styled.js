@@ -10,6 +10,11 @@ export const HeaderIcon = styled(GithubIcon)`
     & path {
         fill: ${({ theme }) => theme.fillColor.main};
     }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        width: 32px;
+        height: 32px;
+    }
 `;
 
 export const Header = styled.h2`
@@ -18,6 +23,11 @@ export const Header = styled.h2`
     line-height: 36px;
     letter-spacing: 0.05em;
     margin: 12px 0 8px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        font-size: 18px;
+        line-height: 22px;
+    }
 `;
 
 export const Caption = styled.p`
@@ -26,6 +36,10 @@ export const Caption = styled.p`
     line-height: 140%;
     letter-spacing: 0.05em;
     margin: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        font-size: 17px;
+    }
 `;
 
 export const PortfolioList = styled.ul`
@@ -41,6 +55,10 @@ export const PortfolioList = styled.ul`
 
     &::-webkit-scrollbar {
         display: none;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        grid-template-columns: 1fr;
+        grid-gap: 16px;
     }
 `;
 
