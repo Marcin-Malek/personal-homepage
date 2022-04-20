@@ -7,6 +7,10 @@ export const Caption = styled.div`
     text-transform: uppercase;
     margin-bottom: 24px;
     color: ${({ theme }) => theme.fillColor.textSecondary};
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        margin-bottom: 12px;
+    }
 `;
 
 export const Mail = styled.a`
@@ -20,6 +24,11 @@ export const Mail = styled.a`
     &:hover {
         color: ${({ theme }) => theme.fillColor.main};
     }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        font-size: 18px;
+        line-height: 22px;
+    }
 `;
 
 export const Text = styled.p`
@@ -29,6 +38,12 @@ export const Text = styled.p`
     line-height: 140%;
     letter-spacing: 0.05em;
     margin: 24px 0 56px 0;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        font-size: 14px;
+        line-height: 17px;
+        margin: 12px 0 40px 0;
+    }
 `;
 
 export const IconLink = styled.a`
@@ -42,5 +57,11 @@ export const IconLink = styled.a`
         & path {
             fill: ${({ theme }) => theme.fillColor.main};
         }
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        width: 32px;
+        height: 32px;
+        margin-right: 16px;
     }
 `;
