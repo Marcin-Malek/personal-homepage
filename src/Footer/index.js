@@ -2,7 +2,7 @@ import { Caption, IconLink, Mail, Text } from "./styled";
 import { ReactComponent as GithubIcon} from "../img/github.svg";
 
 const Footer = () => (
-    <>
+    <footer>
         <Caption>Let's talk!</Caption>
         <Mail href="mailto:marcinmalek01@gmail.com">marcinmalek01@gmail.com</Mail>
         <Text>
@@ -11,7 +11,7 @@ const Footer = () => (
             feel free to contact me.
         </Text>
         <IconLink target="_blank" href="https://www.github.com/Marcin-Malek"><GithubIcon /></IconLink>
-    </>
+    </footer>
 );
 
 export default Footer;
