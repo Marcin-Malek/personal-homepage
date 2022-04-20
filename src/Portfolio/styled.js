@@ -32,10 +32,16 @@ export const PortfolioList = styled.ul`
     display: grid;
     grid-gap: 32px;
     grid-template-columns: 1fr 1fr;
+    overflow-x: auto;
     margin: 24px 0 120px;
     padding: 0;
     list-style-type: none;
     text-align: start;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 `;
 
 export const StyledWarningIcon = styled(WarningIcon)`
