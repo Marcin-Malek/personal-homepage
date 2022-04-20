@@ -7,6 +7,7 @@ import About from './About';
 import List from './List';
 import { skillsList, toLearnList } from './List/contents';
 import Portfolio from './Portfolio';
+import Footer from './Footer';
 
 function App() {
   const theme = useSelector(selectTheme);
@@ -24,6 +25,7 @@ function App() {
         content={toLearnList}
       />
       <Portfolio />
+      <Footer />
     </ThemeProvider>
   );
 }
