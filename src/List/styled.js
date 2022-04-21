@@ -34,11 +34,12 @@ export const StyledList = styled.ul`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0;
-    margin: 24px 0 0 0;
+    margin: 24px 0 0;
     list-style-type: none;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         grid-template-columns: 1fr;
+        margin: 12px 0 0;
     }
 `;
 
