@@ -86,10 +86,6 @@ export const StyledCircle = styled.progress`
         animation: ${ProgressBackgroundAnimation} 6s infinite cubic-bezier(0.3, 0.6, 1, 1);
     }
 
-    &:-ms-lang(x), &:indeterminate {
-        animation: none;
-    }
-
     &:indeterminate::before,
     &:indeterminate::-webkit-progress-value {
         content: "";
@@ -110,9 +106,5 @@ export const StyledCircle = styled.progress`
         height: 100%;
         background-color: transparent;
         animation: ${ProgressForegroundAnimation} 0.75s infinite linear alternate;
-    }
-
-    &::-ms-fill {
-        animation-name: -ms-ring;
     }
 `;
