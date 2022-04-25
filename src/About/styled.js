@@ -28,6 +28,7 @@ export const Image = styled.img`
     max-width: 384px;
     width: 100%;
     height: auto;
+    border: 1px solid ${({ theme }) => theme.borderColor};
     border-radius: 50%;
     grid-area: image;
 
