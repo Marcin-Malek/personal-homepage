@@ -20,6 +20,7 @@ export const Mail = styled.a`
     letter-spacing: 0.05em;
     text-decoration: none;
     color: ${({ theme }) => theme.fillColor.textPrimary};
+    transition: ${({theme}) => theme.transition};
 
     &:hover {
         color: ${({ theme }) => theme.fillColor.main};
@@ -50,6 +51,7 @@ export const IconLink = styled.a`
     margin-right: 24px;
 
     & path {
+        transition: ${({theme}) => theme.transition};
         fill: ${({ theme }) => theme.fillColor.textPrimary};
     }
 
