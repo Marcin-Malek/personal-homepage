@@ -12,7 +12,7 @@ const Card = ({ header, description, homepage, repository }) => (
                 </CardLink>
             ) ||
             <CardLink>
-                Demo: Project has not been deployed yet
+                Demo: Project has not been deployed.
             </CardLink>
         }
         <CardLink>
