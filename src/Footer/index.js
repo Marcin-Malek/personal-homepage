@@ -1,5 +1,6 @@
 import { Caption, IconLink, Mail, Text } from "./styled";
-import { ReactComponent as GithubIcon} from "../img/github.svg";
+import { ReactComponent as GithubIcon } from "../img/github.svg";
+import { ReactComponent as LinkedInIcon } from "../img/linkedin.svg";
 
 const Footer = () => (
     <footer>
@@ -11,6 +12,7 @@ const Footer = () => (
             feel free to contact me.
         </Text>
         <IconLink target="_blank" href="https://www.github.com/Marcin-Malek"><GithubIcon /></IconLink>
+        <IconLink target="_blank" href="https://www.linkedin.com/in/marcin-ma%C5%82ek-4a4a28238/"><LinkedInIcon /></IconLink>
     </footer>
 );
 
