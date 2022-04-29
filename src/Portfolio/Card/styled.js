@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import α from 'color-alpha';
 
 export const StyledCard = styled.li`
     background: ${({ theme }) => theme.fillColor.card};
@@ -71,4 +72,15 @@ export const LinkRow = styled.div`
 
 export const LinkValue = styled.dd`
     margin: 0;
+`;
+
+export const Link = styled.a`
+    color: ${({theme}) => theme.fillColor.main};
+    text-decoration: none;
+    border-bottom: 1px solid ${({theme}) => α(theme.fillColor.main, 0.3)};
+    padding-bottom: 1px;
+
+    &:hover {
+        border-color: unset;
+    }
 `;

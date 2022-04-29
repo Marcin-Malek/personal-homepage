@@ -1,4 +1,4 @@
-import { StyledCard, CardHeader, CardDescription, LinkRow, CardLinks, LinkValue } from "./styled";
+import { StyledCard, CardHeader, CardDescription, LinkRow, CardLinks, LinkValue, Link } from "./styled";
 
 
 const Card = ({ header, description, homepage, repository }) => (
@@ -10,7 +10,7 @@ const Card = ({ header, description, homepage, repository }) => (
                 (homepage &&
                     <LinkRow>
                         <dt>Demo:</dt>
-                        <LinkValue><a href={homepage}>{homepage}</a></LinkValue>
+                        <LinkValue><Link href={homepage}>{homepage}</Link></LinkValue>
                     </LinkRow>
                 ) || (
                     <LinkRow>
@@ -21,7 +21,7 @@ const Card = ({ header, description, homepage, repository }) => (
             }
             <LinkRow>
                 <dt>Code:</dt>
-                <LinkValue><a href={repository}>{repository}</a></LinkValue>
+                <LinkValue><Link href={repository}>{repository}</Link></LinkValue>
             </LinkRow>
         </CardLinks>
     </StyledCard>
