@@ -16,15 +16,17 @@ function App() {
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyle />
       <About />
-      <List
-        title={<>My skillset includes <span style={{ fontSize: `0.8em` }}>🛠️</span></>}
-        content={skillsList}
-      />
-      <List
-        title={<>What i want to learn next <span style={{ fontSize: `0.8em` }}>🚀</span></>}
-        content={toLearnList}
-      />
-      <Portfolio />
+      <main>
+        <List
+          title={<>My skillset includes <span style={{ fontSize: `0.8em` }}>🛠️</span></>}
+          content={skillsList}
+        />
+        <List
+          title={<>What i want to learn next <span style={{ fontSize: `0.8em` }}>🚀</span></>}
+          content={toLearnList}
+        />
+        <Portfolio />
+      </main>
       <Footer />
     </ThemeProvider>
   );

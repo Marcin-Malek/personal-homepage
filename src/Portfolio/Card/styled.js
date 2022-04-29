@@ -47,17 +47,28 @@ export const CardDescription = styled.p`
     }
 `;
 
-export const CardLink = styled.p`
+export const CardLinks = styled.dl`
+    display: grid;
     font-weight: 400;
     font-size: 18px;
+    margin: 24px 0 0;
     line-height: 140%;
     letter-spacing: 0.05em;
     color: ${({ theme }) => theme.fillColor.textSecondary};
-    margin: 8px 0 0;
+    row-gap: 8px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         font-size: 14px;
         line-height: 17px;
-        margin: 10px 0 0;
+        row-gap: 10px;
     }
+`;
+
+export const LinkRow = styled.div`
+    display: grid;
+    grid-template-columns: 4em 1fr;
+`;
+
+export const LinkValue = styled.dd`
+    margin: 0;
 `;
