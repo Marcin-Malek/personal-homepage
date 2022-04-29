@@ -7,7 +7,7 @@ function* fetchGithubReposHandler() {
     try {
         const githubRepos = yield call(getGithubRepos);
         yield put(setGithubRepos(githubRepos));
-        yield delay(2000);
+        yield delay(2000); // just to demonstrate loading animation
         yield put(setFetchState("resolved"));
     } catch (error) {
         yield put(setFetchState("rejected"));

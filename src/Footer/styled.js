@@ -13,6 +13,10 @@ export const Caption = styled.div`
     }
 `;
 
+export const Address = styled.address`
+    font-style: unset;
+`;
+
 export const Mail = styled.a`
     font-weight: 900;
     font-size: 32px;
