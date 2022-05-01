@@ -4,7 +4,6 @@ import {
     Wrapper,
     Label,
     Switch,
-    Slider,
     BrightnessIcon
 } from "./styled";
 
@@ -16,15 +15,13 @@ const ThemeSwitch = () => {
         <Wrapper>
             <Label>{theme === "light" ? "dark mode off" : "dark mode on"}
                 <Switch>
-                    <Slider>
-                        <input
-                            type="checkbox"
-                            onChange={() => dispatch(toggleDarkTheme())}
-                        />
-                        <BrightnessIcon
-                            $themeType={theme}
-                        />
-                    </Slider>
+                    <input
+                        type="checkbox"
+                        onChange={() => dispatch(toggleDarkTheme())}
+                    />
+                    <BrightnessIcon
+                        $themeType={theme}
+                    />
                 </Switch>
             </Label>
         </Wrapper>
