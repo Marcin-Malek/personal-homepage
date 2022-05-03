@@ -45,18 +45,14 @@ export const Caption = styled.p`
 export const PortfolioList = styled.ul`
     display: grid;
     grid-gap: 32px;
-    grid-template-columns: 1fr 1fr;
-    overflow-x: auto;
+    grid-template-columns: repeat(2, 1fr);
     margin: 24px 0 120px;
     padding: 0;
-    list-style-type: none;
     text-align: start;
-    scrollbar-width: none;
+    list-style-type: none;
+    overflow-x: auto;
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
         grid-template-columns: 1fr;
         grid-gap: 16px;
     }

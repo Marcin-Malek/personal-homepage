@@ -6,7 +6,7 @@ const Footer = () => (
     <footer>
         <Caption>Let's talk!</Caption>
         <Address>
-            <Mail href="mailto:marcinmalek01@gmail.com">marcinmalek01@gmail.com</Mail>
+            <Mail href="mailto:marcinmalek01@gmail.com">marcinmalek01@<wbr/>gmail.com</Mail>
             <Text>
                 I'm always keen to learn and explore new possibilities.
                 If you are looking for a Frontend Developer like me,
