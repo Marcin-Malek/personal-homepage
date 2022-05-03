@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './GlobalStyle';
+import Normalize from 'react-normalize';
 import { lightTheme, darkTheme } from './theme';
 import { selectTheme } from './slice';
 import About from './About';
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <Normalize />
       <GlobalStyle />
       <About />
       <main>
