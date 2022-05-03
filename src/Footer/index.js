@@ -12,8 +12,8 @@ const Footer = () => (
                 If you are looking for a Frontend Developer like me,
                 feel free to contact me.
             </Text>
-            <IconLink target="_blank" href="https://www.github.com/Marcin-Malek"><GithubIcon /></IconLink>
-            <IconLink target="_blank" href="https://www.linkedin.com/in/marcin-ma%C5%82ek-4a4a28238/"><LinkedInIcon /></IconLink>
+            <IconLink target="_blank" href="https://www.github.com/Marcin-Malek" title="Github"><GithubIcon /></IconLink>
+            <IconLink target="_blank" href="https://www.linkedin.com/in/marcin-ma%C5%82ek-4a4a28238/" title="LinkedIn"><LinkedInIcon /></IconLink>
         </Address>
     </footer>
 );
