@@ -24,7 +24,7 @@ export const Mail = styled.a`
     letter-spacing: 0.05em;
     text-decoration: none;
     color: ${({ theme }) => theme.fillColor.textPrimary};
-    transition: ${({theme}) => theme.transition};
+    transition: color ${({theme}) => theme.transition};
 
     &:hover {
         color: ${({ theme }) => theme.fillColor.main};
@@ -59,6 +59,8 @@ export const IconLink = styled.a`
         fill: ${({ theme }) => theme.fillColor.textPrimary};
     }
 
+    //It is added like this, so that the color changes also
+    //when cursor is above not filled parts
     &:hover {
         & path {
             fill: ${({ theme }) => theme.fillColor.main};

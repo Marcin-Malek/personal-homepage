@@ -50,7 +50,6 @@ export const PortfolioList = styled.ul`
     padding: 0;
     text-align: start;
     list-style-type: none;
-    overflow-x: auto;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
         grid-template-columns: 1fr;

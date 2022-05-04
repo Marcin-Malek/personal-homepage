@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
         max-width: 1216px;
         padding: 119px 14px 109px;
         margin: auto !important;
+        word-break: break-word;
         background-color: ${({theme}) => theme.fillColor.background};
         color: ${({theme}) => theme.fillColor.textPrimary};
         transition: background-color ${({theme}) => theme.transition};
