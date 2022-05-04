@@ -25,14 +25,17 @@ export const Wrapper = styled.header`
 `;
 
 export const Image = styled.img`
-    max-width: 384px;
-    width: 100%;
-    height: auto;
+    width: 384px;
+    height: 384px;
     border: 1px solid ${({ theme }) => theme.borderColor};
     border-radius: 50%;
     grid-area: image;
-
+    
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+        max-width: 384px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
         margin-bottom: 16px;
     }
 `;
