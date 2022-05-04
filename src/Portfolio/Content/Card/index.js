@@ -1,4 +1,12 @@
-import { StyledCard, CardHeader, CardDescription, LinkRow, CardLinks, LinkValue, Link } from "./styled";
+import {
+    StyledCard,
+    CardHeader,
+    CardDescription,
+    LinkRow,
+    CardLinks,
+    LinkValue,
+    Link
+} from "./styled";
 
 
 const Card = ({ header, description, homepage, repository }) => (

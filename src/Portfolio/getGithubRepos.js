@@ -1,9 +1,5 @@
-export const getGithubRepos = async () => {
-    const response = await fetch("https://api.github.com/users/Marcin-Malek/repos");
+import axios from "axios";
 
-    if (!response.ok) {
-        new Error(response.statusText);
-    }
-
-    return await response.json();
-};
+export const getGithubRepos = () => axios
+    .get("https://api.github.com/users/Marcin-Malek/repos")
+    .then(response => response.data);

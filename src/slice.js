@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     theme: "light",
-    fetchState: undefined,
+    fetchState: "initial",
     githubRepos: undefined,
 };
 
