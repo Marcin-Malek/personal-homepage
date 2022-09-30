@@ -5,8 +5,8 @@ import {
     LinkRow,
     CardLinks,
     LinkValue,
-    Link
 } from "./styled";
+import { Link } from "../../../common/styled";
 
 
 const Card = ({ header, description, homepage, repository }) => (

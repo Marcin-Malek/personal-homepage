@@ -9,6 +9,7 @@ import List from './List';
 import { skillsList, toLearnList } from './List/contents';
 import Portfolio from './Portfolio';
 import Footer from './Footer';
+import { EmojiWrapper } from './common/styled';
 
 function App() {
   const theme = useSelector(selectTheme);
@@ -20,11 +21,11 @@ function App() {
       <About />
       <main>
         <List
-          title={<>My skillset includes <span style={{ fontSize: `0.8em` }}>🛠️</span></>}
+          title={<>My skillset includes <EmojiWrapper>🛠️</EmojiWrapper></>}
           content={skillsList}
         />
         <List
-          title={<>What i want to learn next <span style={{ fontSize: `0.8em` }}>🚀</span></>}
+          title={<>What i want to learn next <EmojiWrapper>🚀</EmojiWrapper></>}
           content={toLearnList}
         />
         <Portfolio />
