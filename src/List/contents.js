@@ -26,10 +26,10 @@ export const skillsList = [
     "Matlab (Basic knowledge)",
     "Android SDK",
     "Firebase",
+    "TypeScript",
   ];
 
   export const toLearnList = [
-      "TypeScript",
       "React Native",
       "Wordpress",
       "C++",
