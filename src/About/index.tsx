@@ -22,8 +22,7 @@ const About = () => (
             who is currently a proud member of software development team at { }
             <Link 
                 href="https://ftd.aero/" 
-                noopener 
-                norefferer
+                rel="noopener norefferer"
                 target="_blank"
             >
                 FTD.aero
