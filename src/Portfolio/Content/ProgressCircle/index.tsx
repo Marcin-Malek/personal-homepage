@@ -1,9 +1,9 @@
 import { CircleBorder, StyledCircle } from "./styled";
 
 const ProgressCircle = () => (
-    <CircleBorder>
-        <StyledCircle />
-    </CircleBorder>
+	<CircleBorder>
+		<StyledCircle />
+	</CircleBorder>
 );
 
 export default ProgressCircle;

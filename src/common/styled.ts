@@ -1,5 +1,5 @@
-import α from 'color-alpha';
-import styled from 'styled-components';
+import α from "color-alpha";
+import styled from "styled-components";
 
 export const Link = styled.a`
     color: ${({theme}) => theme.fillColor.main};

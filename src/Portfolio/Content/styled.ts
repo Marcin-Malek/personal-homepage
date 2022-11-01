@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import { ReactComponent as WarningIcon } from "../../img/warning.svg";
 
 export const PortfolioList = styled.ul`

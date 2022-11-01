@@ -7,9 +7,9 @@ interface LinkButtonProps {
 }
 
 const LinkButton = ({ link, img, text }: LinkButtonProps) => {
-    return (
-        <StyledButton href={link}>{img}{text}</StyledButton>
-    );
-}
+	return (
+		<StyledButton href={link}>{img}{text}</StyledButton>
+	);
+};
 
 export default LinkButton;

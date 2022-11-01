@@ -8,14 +8,14 @@ interface InfoProps {
 }
 
 const Info = ({ icon, header, text, additionalElement }: InfoProps) => {
-    return (
-        <StyledInfo>
-            {icon}
-            <InfoHeader>{header}</InfoHeader>
-            <InfoText>{text}</InfoText>
-            {additionalElement}
-        </StyledInfo>
-    );
-}
+	return (
+		<StyledInfo>
+			{icon}
+			<InfoHeader>{header}</InfoHeader>
+			<InfoText>{text}</InfoText>
+			{additionalElement}
+		</StyledInfo>
+	);
+};
 
 export default Info;

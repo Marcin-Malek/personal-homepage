@@ -1,0 +1,9 @@
+{
+	"semi": true,
+	"singleQuote": false,
+	"printWidth": 130,
+	"eslintIntegration": true,
+	"jsx-bracket-same-line": true,
+	"tabWidth": 4,
+	"useTabs": true
+}

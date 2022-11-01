@@ -6,17 +6,17 @@ interface ListProps {
 }
 
 const List = ({ title, content }: ListProps) => (
-    <ListWrapper>
-        <ListHeader>{title}</ListHeader>
-        <StyledList>
-            {content.map((item, index) => (
-                <ListItem key={index}>
-                    <StyledMarker />
-                    {item}
-                </ListItem>
-            ))}
-        </StyledList>
-    </ListWrapper>
+	<ListWrapper>
+		<ListHeader>{title}</ListHeader>
+		<StyledList>
+			{content.map((item, index) => (
+				<ListItem key={index}>
+					<StyledMarker />
+					{item}
+				</ListItem>
+			))}
+		</StyledList>
+	</ListWrapper>
 );
 
 export default List;

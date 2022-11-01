@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledInfo = styled.div`
     margin: 88px 0 140px;

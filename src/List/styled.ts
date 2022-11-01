@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import { ReactComponent as Marker } from "../img/marker.svg";
 
 export const ListWrapper = styled.section`
