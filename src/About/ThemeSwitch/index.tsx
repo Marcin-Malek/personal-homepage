@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { selectTheme, toggleDarkTheme } from "../../slice";
+import { ThemeType } from "../../types";
 import {
     Wrapper,
     Label,
@@ -13,7 +14,7 @@ const ThemeSwitch = () => {
 
     return (
         <Wrapper>
-            <Label>{theme === "light" ? "dark mode off" : "dark mode on"}
+            <Label>{theme === ThemeType.Light ? "dark mode off" : "dark mode on"}
                 <Switch>
                     <input
                         type="checkbox"

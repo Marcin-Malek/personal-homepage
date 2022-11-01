@@ -1,6 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
-// @ts-ignore
 import { portfolioSaga } from "./Portfolio/portfolioSaga";
 import reducer from './slice';
 

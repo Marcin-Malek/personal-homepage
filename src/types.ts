@@ -100,4 +100,16 @@ export interface Repository {
     default_branch: string;
 }
 
-export type GithubReposApiResponse = Repository[]
+export type GithubReposApiResponse = Repository[];
+
+export enum ThemeType {
+    Light,
+    Dark
+}
+
+export enum FetchState {
+    Initial = "initial",
+    Loading = "loading",
+    Success = "success",
+    Failure = "failure",
+}

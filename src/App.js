@@ -10,12 +10,13 @@ import { skillsList, toLearnList } from './List/contents';
 import Portfolio from './Portfolio';
 import Footer from './Footer';
 import { EmojiWrapper } from './common/styled';
+import { ThemeType } from './types';
 
 function App() {
   const theme = useSelector(selectTheme);
 
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme === ThemeType.Light ? lightTheme : darkTheme}>
       <Normalize />
       <GlobalStyle />
       <About />

@@ -5,15 +5,16 @@ import Info from "./Info";
 import ProgressCircle from "./ProgressCircle";
 import LinkButton from "../../LinkButton";
 import { PortfolioList, StyledWarningIcon } from "./styled";
+import { FetchState } from "../../types";
 
 const Content = () => {
     const fetchState = useSelector(selectFetchState);
     const repos = useSelector(selectGithubRepos);
 
-    if (fetchState === "initial") {
+    if (fetchState === FetchState.Initial) {
         return null;
 
-    } else if (fetchState === "loading") {
+    } else if (fetchState === FetchState.Loading) {
         return (
             <Info
                 text="Please wait, projects are being loaded..."
@@ -21,7 +22,7 @@ const Content = () => {
             />
         );
 
-    } else if (fetchState === "success" && repos instanceof Array && repos.length > 0) {
+    } else if (fetchState === FetchState.Success && repos instanceof Array && repos.length > 0) {
         return (
             <PortfolioList>
                 {repos.map((repo) => (
@@ -36,7 +37,7 @@ const Content = () => {
             </PortfolioList>
         );
 
-    } else if (fetchState === "success" && repos instanceof Array && !repos.length > 0) {
+    } else if (fetchState === FetchState.Success && repos instanceof Array && !repos.length > 0) {
         return (
             <Info
                 header="Sorry! It looks like it's empty..."
@@ -44,7 +45,7 @@ const Content = () => {
             />
         );
 
-    } else if (fetchState === "failure") {
+    } else if (fetchState === FetchState.Failure) {
         return (
             <Info
                 icon={<StyledWarningIcon />}
@@ -64,7 +65,7 @@ const Content = () => {
             />
         );
     }
-    throw new Error(`incorrect state: ${fetchState}`);
+    //throw new Error(`incorrect state: ${fetchState}`);
 }
 
 export default Content;

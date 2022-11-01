@@ -1,16 +1,16 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from './store';
-import { GithubReposApiResponse } from './types';
+import { FetchState, GithubReposApiResponse, ThemeType } from './types';
 
 interface StateType {
-    theme: string;
-    fetchState: "initial" | "loading" | "success" | "failure";
+    theme: ThemeType;
+    fetchState: FetchState;
     githubRepos?: GithubReposApiResponse;
 }
 
 const initialState: StateType = {
-    theme: "light",
-    fetchState: "initial",
+    theme: ThemeType.Light,
+    fetchState: FetchState.Initial,
     githubRepos: undefined,
 };
 
@@ -19,13 +19,15 @@ const globalSlice = createSlice({
     initialState,
     reducers: {
         toggleDarkTheme(state) {
-            state.theme === "light" ? state.theme = "dark" : state.theme = "light";
+            state.theme === ThemeType.Light ?
+                state.theme = ThemeType.Dark :
+                state.theme = ThemeType.Light;
         },
         fetchGithubRepos: () => { },
-        setFetchState: (state, { payload }) => {
+        setFetchState: (state, { payload }: PayloadAction<FetchState>) => {
             state.fetchState = payload;
         },
-        setGithubRepos: (state, { payload }) => {
+        setGithubRepos: (state, { payload }: PayloadAction<GithubReposApiResponse>) => {
             state.githubRepos = payload;
         },
     }
