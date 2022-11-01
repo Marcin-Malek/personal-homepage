@@ -37,7 +37,7 @@ const Content = () => {
             </PortfolioList>
         );
 
-    } else if (fetchState === FetchState.Success && repos instanceof Array && !repos.length > 0) {
+    } else if (fetchState === FetchState.Success && repos instanceof Array && repos.length <= 0) {
         return (
             <Info
                 header="Sorry! It looks like it's empty..."
@@ -65,7 +65,7 @@ const Content = () => {
             />
         );
     }
-    //throw new Error(`incorrect state: ${fetchState}`);
+    throw new Error(`incorrect state: ${fetchState}`);
 }
 
 export default Content;

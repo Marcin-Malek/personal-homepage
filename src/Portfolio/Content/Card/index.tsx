@@ -8,11 +8,17 @@ import {
 } from "./styled";
 import { Link } from "../../../common/styled";
 
+interface CardProps {
+    header: string;
+    description: string | null;
+    homepage: string | null;
+    repository: string;
+}
 
-const Card = ({ header, description, homepage, repository }) => (
+const Card = ({ header, description, homepage, repository }: CardProps) => (
     <StyledCard>
         <CardHeader>{header}</CardHeader>
-        <CardDescription>{description}</CardDescription>
+        {description && <CardDescription>{description}</CardDescription>}
         <CardLinks>
             {
                 (homepage &&

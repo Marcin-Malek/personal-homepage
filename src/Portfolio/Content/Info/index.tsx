@@ -1,6 +1,13 @@
 import { InfoHeader, InfoText, StyledInfo } from "./styled";
 
-const Info = ({ icon, header, text, additionalElement }) => {
+interface InfoProps {
+    icon?: JSX.Element;
+    header?: string;
+    text?: string | JSX.Element;
+    additionalElement?: JSX.Element;
+}
+
+const Info = ({ icon, header, text, additionalElement }: InfoProps) => {
     return (
         <StyledInfo>
             {icon}

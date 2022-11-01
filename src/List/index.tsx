@@ -1,6 +1,11 @@
 import { ListWrapper, ListHeader, StyledList, ListItem, StyledMarker } from "./styled";
 
-const List = ({ title, content }) => (
+interface ListProps {
+    title: JSX.Element;
+    content: string[];
+}
+
+const List = ({ title, content }: ListProps) => (
     <ListWrapper>
         <ListHeader>{title}</ListHeader>
         <StyledList>
