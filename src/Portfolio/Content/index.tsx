@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../../store";
 import { selectFetchState, selectGithubRepos } from "../../slice";
 import Card from "./Card";
 import Info from "./Info";
@@ -8,8 +8,8 @@ import { PortfolioList, StyledWarningIcon } from "./styled";
 import { FetchState } from "../../types";
 
 const Content = () => {
-	const fetchState = useSelector(selectFetchState);
-	const repos = useSelector(selectGithubRepos);
+	const fetchState = useAppSelector(selectFetchState);
+	const repos = useAppSelector(selectGithubRepos);
 
 	if (fetchState === FetchState.Initial) {
 		return null;

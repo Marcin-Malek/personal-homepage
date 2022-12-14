@@ -1,8 +1,8 @@
-import { useSelector } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
 import Normalize from "react-normalize";
 import { lightTheme, darkTheme } from "./theme";
+import { useAppSelector } from "./store";
 import { selectTheme } from "./slice";
 import About from "./About";
 import List from "./List";
@@ -13,7 +13,7 @@ import { EmojiWrapper } from "./common/styled";
 import { ThemeType } from "./types";
 
 function App() {
-	const theme = useSelector(selectTheme);
+	const theme = useAppSelector(selectTheme);
 
 	return (
 		<ThemeProvider theme={theme === ThemeType.Light ? lightTheme : darkTheme}>

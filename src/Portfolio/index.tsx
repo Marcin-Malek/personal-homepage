@@ -1,5 +1,5 @@
-import { useDispatch } from "react-redux";
 import { useEffect } from "react";
+import { useAppDispatch } from "../store";
 import { fetchGithubRepos } from "../slice";
 import Content from "./Content";
 import {
@@ -10,7 +10,7 @@ import {
 } from "./styled";
 
 const Portfolio = () => {
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 
 	useEffect(() => {
 		dispatch(fetchGithubRepos());

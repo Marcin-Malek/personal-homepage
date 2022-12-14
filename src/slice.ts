@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "./store";
 import { FetchState, GithubReposApiResponse, ThemeType } from "./types";
 
 interface StateType {
@@ -41,10 +40,10 @@ export const {
 	setGithubRepos
 } = globalSlice.actions;
 
-export const selectTheme = (state: RootState) => state.theme;
+export const selectTheme = (state: StateType) => state.theme;
 
-export const selectFetchState = (state: RootState) => state.fetchState;
+export const selectFetchState = (state: StateType) => state.fetchState;
 
-export const selectGithubRepos = (state: RootState) => state.githubRepos;
+export const selectGithubRepos = (state: StateType) => state.githubRepos;
 
 export default globalSlice.reducer;
