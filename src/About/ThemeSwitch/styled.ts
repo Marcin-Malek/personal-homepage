@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { ReactComponent as Icon } from "../../img/brightness.svg";
+import { ThemeType } from "../../types";
 
 export const Wrapper = styled.div`
     grid-area: switch;
@@ -50,7 +51,7 @@ export const BrightnessIcon = styled(Icon)`
     background-color: ${({ theme }) => theme.fillColor.textSecondary};
     transition: ${({ theme }) => theme.transition};
 
-    ${({ $themeType }) => $themeType === "dark" && css`
+    ${({ $themeType }) => $themeType === ThemeType.Dark && css`
         transform: translate(100%) rotate(0.5turn);
         & path {
             fill: ${({ theme }) => theme.fillColor.background};
