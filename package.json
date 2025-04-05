@@ -1,6 +1,7 @@
 {
   "name": "personal-homepage",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "homepage": "https://marcin-malek.github.io/personal-homepage/",
   "dependencies": {
@@ -13,14 +14,13 @@
     "@types/react-dom": "^18.0.8",
     "color-alpha": "^1.1.3",
     "gh-pages": "^3.2.3",
-    "react": "^17.0.2",
+    "react": "^19.1.0",
     "react-dom": "^17.0.2",
     "react-normalize": "^0.4.4",
     "react-redux": "^7.2.8",
     "react-scripts": "5.0.1",
     "redux": "^5.0.1",
     "styled-components": "^5.3.5",
-    "typescript": "^4.8.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -29,7 +29,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build",
-    "predeploy": "npm run build"
+    "predeploy": "npm run build",
+    "lint": "eslint --fix ."
   },
   "eslintConfig": {
     "extends": [
@@ -50,12 +51,14 @@
     ]
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.24.0",
     "@types/react-redux": "^7.1.34",
     "@types/styled-components": "^5.1.26",
-    "@typescript-eslint/eslint-plugin": "^5.42.0",
-    "@typescript-eslint/parser": "^5.42.0",
-    "eslint": "^8.26.0",
-    "eslint-plugin-react": "^7.31.10",
-    "eslint-plugin-prettier": "*"
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
+    "eslint": "^9.24.0",
+    "eslint-plugin-react": "^7.37.5",
+    "typescript": "^5.8.3"
   }
 }
