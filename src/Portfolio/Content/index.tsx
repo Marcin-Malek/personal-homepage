@@ -1,24 +1,23 @@
-import { useAppSelector } from "../../store";
-import { selectFetchState, selectGithubRepos } from "../../slice";
+import { useGetReposQuery } from "../githubApi";
+
 import Card from "./Card";
 import Info from "./Info";
 import ProgressCircle from "./ProgressCircle";
 import LinkButton from "../../LinkButton";
+
 import { PortfolioList, StyledWarningIcon } from "./styled";
-import { FetchState } from "../../types";
 
 const Content = () => {
-	const fetchState = useAppSelector(selectFetchState);
-	const repos = useAppSelector(selectGithubRepos);
+	const { data: repos, ...restInfo } = useGetReposQuery();
 
-	if (fetchState === FetchState.Initial) {
+	if (restInfo.isUninitialized) {
 		return null;
-	} else if (fetchState === FetchState.Loading) {
+	} else if (restInfo.isLoading) {
 		return <Info
 			text="Please wait, projects are being loaded..."
 			additionalElement={<ProgressCircle />} 
 		/>;
-	} else if (fetchState === FetchState.Success && repos instanceof Array && repos.length > 0) {
+	} else if (restInfo.isSuccess && repos instanceof Array && repos.length > 0) {
 		return (
 			<PortfolioList>
 				{repos.map((repo) => (
@@ -32,14 +31,14 @@ const Content = () => {
 				))}
 			</PortfolioList>
 		);
-	} else if (fetchState === FetchState.Success && repos instanceof Array && repos.length <= 0) {
+	} else if (restInfo.isSuccess && repos instanceof Array && repos.length <= 0) {
 		return (
 			<Info
 				header="Sorry! It looks like it's empty..."
 				text="Apparently I dont have any public repositories to show you right now."
 			/>
 		);
-	} else if (fetchState === FetchState.Failure) {
+	} else if (restInfo.isError) {
 		return (
 			<Info
 				icon={<StyledWarningIcon />}
@@ -56,7 +55,7 @@ const Content = () => {
 			/>
 		);
 	}
-	throw new Error(`incorrect state: ${fetchState}`);
+	throw new Error(`incorrect state: ${{repos, restInfo}}`);
 };
 
 export default Content;

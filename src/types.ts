@@ -106,10 +106,3 @@ export enum ThemeType {
     Light,
     Dark
 }
-
-export enum FetchState {
-    Initial = "initial",
-    Loading = "loading",
-    Success = "success",
-    Failure = "failure",
-}

@@ -1,18 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import createSagaMiddleware from "redux-saga";
-import { portfolioSaga } from "./Portfolio/portfolioSaga";
-import reducer from "./slice";
-
-const sagaMiddleware = createSagaMiddleware();
+import githubApi from "./Portfolio/githubApi";
+import themeSlice from "./slice";
 
 const store = configureStore({
-	reducer,
-	middleware: [sagaMiddleware]
+	reducer: {
+		theme: themeSlice,
+		[githubApi.reducerPath]: githubApi.reducer
+	},
+	middleware: getDefaultMiddleware => getDefaultMiddleware().concat(githubApi.middleware)
 });
-
-sagaMiddleware.run(portfolioSaga);
-
 
 export type RootState = ReturnType<typeof store.getState>
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;

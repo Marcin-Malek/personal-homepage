@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import { useAppDispatch } from "../store";
-import { fetchGithubRepos } from "../slice";
 import Content from "./Content";
 import {
 	Wrapper,
@@ -10,12 +7,6 @@ import {
 } from "./styled";
 
 const Portfolio = () => {
-	const dispatch = useAppDispatch();
-
-	useEffect(() => {
-		dispatch(fetchGithubRepos());
-	}, [dispatch]);
-
 	return (
 		<Wrapper>
 			<HeaderIcon />
