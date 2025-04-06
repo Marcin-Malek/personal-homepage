@@ -1,4 +1,6 @@
-import { useGetReposQuery } from "../githubApi";
+import { useCallback, useEffect } from "react";
+import { useLazyGetReposQuery } from "../githubApi";
+import { GithubReposApiResponse } from "../../types";
 
 import Card from "./Card";
 import Info from "./Info";
@@ -6,11 +8,15 @@ import ProgressCircle from "./ProgressCircle";
 import LinkButton from "../../LinkButton";
 
 import { PortfolioList, StyledWarningIcon } from "./styled";
-import { useCallback } from "react";
-import { GithubReposApiResponse } from "../../types";
 
-const Content = () => {
-	const { data: repos, ...restInfo } = useGetReposQuery();
+const Content = ({ inView }: { inView: boolean }) => {
+	const [fetchRepos, { data: repos, ...restInfo }] = useLazyGetReposQuery();
+
+	useEffect(() => {
+		if (inView) {
+			fetchRepos();
+		}
+	}, [inView, fetchRepos]);
 
 	const filterRepos = useCallback((repos: GithubReposApiResponse) => repos.filter(
 		(repo) => !repo.fork && !repo.archived && !repo.disabled && !repo.private

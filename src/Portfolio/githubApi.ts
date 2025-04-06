@@ -16,6 +16,7 @@ const githubApi = createApi({
 	})
 });
 
-export const { useGetReposQuery } = githubApi;
+export const { useLazyGetReposQuery } = githubApi;
+
 
 export default githubApi;
