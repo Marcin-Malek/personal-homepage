@@ -21,7 +21,7 @@ const ThemeSwitch = () => {
 						onChange={() => dispatch(toggleDarkTheme())}
 					/>
 					<BrightnessIcon
-						themeType={theme}
+						$themeType={theme}
 					/>
 				</Switch>
 			</Label>

@@ -42,7 +42,7 @@ export const Switch = styled.span`
     }
 `;
 
-export const BrightnessIcon = styled(Icon)<{themeType: ThemeType}>`
+export const BrightnessIcon = styled(Icon)<{$themeType: ThemeType}>`
     height: 14px;
     width: 14px;
     padding: 3px;
@@ -51,7 +51,7 @@ export const BrightnessIcon = styled(Icon)<{themeType: ThemeType}>`
     background-color: ${({ theme }) => theme.fillColor.textSecondary};
     transition: ${({ theme }) => theme.transition};
 
-    ${({ themeType }) => themeType === ThemeType.Dark && css`
+    ${({ $themeType }) => $themeType === ThemeType.Dark && css`
         transform: translate(100%) rotate(0.5turn);
         & path {
             fill: ${({ theme }) => theme.fillColor.background};
