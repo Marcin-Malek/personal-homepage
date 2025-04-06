@@ -1,4 +1,5 @@
 import { ListWrapper, ListHeader, StyledList, ListItem, StyledMarker } from "./styled";
+import { JSX } from "react";
 
 interface ListProps {
     title: JSX.Element;

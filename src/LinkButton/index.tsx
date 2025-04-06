@@ -1,4 +1,5 @@
 import { StyledButton } from "./styled";
+import { JSX } from "react";
 
 interface LinkButtonProps {
     link: string;

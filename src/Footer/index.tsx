@@ -1,6 +1,6 @@
 import { Address, Caption, IconLink, Mail, Text } from "./styled";
-import { ReactComponent as GithubIcon } from "../img/github.svg";
-import { ReactComponent as LinkedInIcon } from "../img/linkedin.svg";
+import GithubIcon from "../img/github.svg?react";
+import LinkedInIcon from "../img/linkedin.svg?react";
 
 const Footer = () => (
 	<footer>

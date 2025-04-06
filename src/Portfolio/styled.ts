@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as GithubIcon } from "../img/github.svg";
+import GithubIcon from "../img/github.svg?react";
 
 export const Wrapper = styled.section`
     text-align: center;

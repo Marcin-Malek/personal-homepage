@@ -1,4 +1,4 @@
-import { ReactComponent as EnvelopeIcon } from "../img/envelope.svg";
+import EnvelopeIcon from "../img/envelope.svg?react";
 import { Wrapper, Image, Caption, Header, Description } from "./styled";
 import { EmojiWrapper, Link } from "../common/styled";
 import ThemeSwitch from "./ThemeSwitch";

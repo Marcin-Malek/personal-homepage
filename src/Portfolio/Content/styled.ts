@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as WarningIcon } from "../../img/warning.svg";
+import WarningIcon from "../../img/warning.svg?react";
 
 export const PortfolioList = styled.ul`
     display: grid;

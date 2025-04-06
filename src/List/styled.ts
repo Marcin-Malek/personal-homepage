@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as Marker } from "../img/marker.svg";
+import Marker from "../img/marker.svg?react";
 
 export const ListWrapper = styled.section`
     padding: 32px;

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { ReactComponent as Icon } from "../../img/brightness.svg";
+import Icon from "../../img/brightness.svg?react";
 import { ThemeType } from "../../types";
 
 export const Wrapper = styled.div`
@@ -42,7 +42,7 @@ export const Switch = styled.span`
     }
 `;
 
-export const BrightnessIcon = styled(Icon)`
+export const BrightnessIcon = styled(Icon)<{themeType: ThemeType}>`
     height: 14px;
     width: 14px;
     padding: 3px;
@@ -51,7 +51,7 @@ export const BrightnessIcon = styled(Icon)`
     background-color: ${({ theme }) => theme.fillColor.textSecondary};
     transition: ${({ theme }) => theme.transition};
 
-    ${({ $themeType }) => $themeType === ThemeType.Dark && css`
+    ${({ themeType }) => themeType === ThemeType.Dark && css`
         transform: translate(100%) rotate(0.5turn);
         & path {
             fill: ${({ theme }) => theme.fillColor.background};

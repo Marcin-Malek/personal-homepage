@@ -1,4 +1,5 @@
 import { InfoHeader, InfoText, StyledInfo } from "./styled";
+import { JSX } from "react";
 
 interface InfoProps {
     icon?: JSX.Element;

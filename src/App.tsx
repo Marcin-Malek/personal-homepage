@@ -12,7 +12,7 @@ import Footer from "./Footer";
 import { EmojiWrapper } from "./common/styled";
 import { ThemeType } from "./types";
 
-function App() {
+const App = () => {
 	const theme = useAppSelector(selectTheme);
 
 	return (
@@ -42,6 +42,6 @@ function App() {
 			<Footer />
 		</ThemeProvider>
 	);
-}
+};
 
 export default App;
