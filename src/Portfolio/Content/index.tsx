@@ -6,9 +6,15 @@ import ProgressCircle from "./ProgressCircle";
 import LinkButton from "../../LinkButton";
 
 import { PortfolioList, StyledWarningIcon } from "./styled";
+import { useCallback } from "react";
+import { GithubReposApiResponse } from "../../types";
 
 const Content = () => {
 	const { data: repos, ...restInfo } = useGetReposQuery();
+
+	const filterRepos = useCallback((repos: GithubReposApiResponse) => repos.filter(
+		(repo) => !repo.fork && !repo.archived && !repo.disabled && !repo.private
+	), [repos]);
 
 	if (restInfo.isUninitialized) {
 		return null;
@@ -20,7 +26,7 @@ const Content = () => {
 	} else if (restInfo.isSuccess && repos instanceof Array && repos.length > 0) {
 		return (
 			<PortfolioList>
-				{repos.map((repo) => (
+				{filterRepos(repos).map((repo) => (
 					<Card
 						key={repo.id}
 						header={repo.name}
