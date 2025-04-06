@@ -1,3 +1,5 @@
+import { ThemeType } from "./types";
+
 const commonProperties = {
 	borderColor: "#D1D5DA4D",
 	transition: "1s cubic-bezier(0.69, 0.15, 0.31, 0.85)",
@@ -7,7 +9,7 @@ const commonProperties = {
 	}
 };
 
-export const lightTheme = {
+const lightTheme = {
 	fillColor: {
 		background: "#FBFBFE",
 		card: "#FFFFFF",
@@ -23,7 +25,7 @@ export const lightTheme = {
 	...commonProperties
 };
 
-export const darkTheme = {
+const darkTheme = {
 	fillColor: {
 		background: "#252525",
 		card: "#363636B8",
@@ -37,4 +39,12 @@ export const darkTheme = {
 		buttonClick: "inset 0 2px 0 #14462033"
 	},
 	...commonProperties
+};
+
+const initialTheme = { ...lightTheme, transition: "0" };
+
+export const themeMap = {
+	[ThemeType.Initial]: initialTheme,
+	[ThemeType.Light]: lightTheme,
+	[ThemeType.Dark]: darkTheme
 };

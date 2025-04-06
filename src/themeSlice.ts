@@ -5,10 +5,10 @@ import { RootState } from "./store";
 
 const themeSlice = createSlice({
 	name: "theme",
-	initialState: ThemeType.Light,
+	initialState: ThemeType.Initial,
 	reducers: {
 		toggleDarkTheme(state) {
-			return state === ThemeType.Light ? ThemeType.Dark : ThemeType.Light;
+			return state === ThemeType.Dark ? ThemeType.Light : ThemeType.Dark;
 		}
 	}
 });

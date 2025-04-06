@@ -1,4 +1,4 @@
-import { selectTheme, toggleDarkTheme } from "../../slice";
+import { selectTheme, toggleDarkTheme } from "../../themeSlice";
 import { useAppDispatch, useAppSelector } from "../../store";
 import { ThemeType } from "../../types";
 import {
@@ -9,19 +9,19 @@ import {
 } from "./styled";
 
 const ThemeSwitch = () => {
-	const theme = useAppSelector(selectTheme);
+	const themeState = useAppSelector(selectTheme);
 	const dispatch = useAppDispatch();
 
 	return (
 		<Wrapper>
-			<Label>{theme === ThemeType.Light ? "dark mode off" : "dark mode on"}
+			<Label>{themeState === ThemeType.Dark ? "dark mode on" : "dark mode off"}
 				<Switch>
 					<input
 						type="checkbox"
 						onChange={() => dispatch(toggleDarkTheme())}
 					/>
 					<BrightnessIcon
-						$themeType={theme}
+						$themeType={themeState}
 					/>
 				</Switch>
 			</Label>

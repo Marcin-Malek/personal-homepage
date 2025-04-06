@@ -103,6 +103,7 @@ export interface Repository {
 export type GithubReposApiResponse = Repository[];
 
 export enum ThemeType {
+    Initial,
     Light,
     Dark
 }
