@@ -26,6 +26,10 @@ export default defineConfig([{
 		react,
 		"@typescript-eslint": typescriptEslint
 	},
+	ignores: [
+		"node_modules/**",
+		"build/**"
+	],
 	settings: {
 		react: {
 			version: "detect"
