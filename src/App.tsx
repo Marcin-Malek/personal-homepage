@@ -1,6 +1,5 @@
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
-import Normalize from "react-normalize";
 import { themeMap } from "./theme";
 import { useAppSelector } from "./store";
 import { selectTheme } from "./themeSlice";
@@ -16,7 +15,6 @@ const App = () => {
 
 	return (
 		<ThemeProvider theme={themeMap[themeState]}>
-			<Normalize />
 			<GlobalStyle />
 			<About />
 			<main>
