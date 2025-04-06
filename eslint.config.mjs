@@ -26,6 +26,11 @@ export default defineConfig([{
 		react,
 		"@typescript-eslint": typescriptEslint
 	},
+	settings: {
+		react: {
+			version: "detect"
+		}
+	},
 	languageOptions: {
 		globals: {
 			window: true,
