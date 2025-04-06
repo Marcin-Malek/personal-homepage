@@ -1,38 +1,39 @@
 export const skillsList = [
-	"Semantic & accessible HTML",
 	"JavaScript (ES6+)",
-	"Immutability",
+	"TypeScript",
+	"C++",
+	"C# (Basic knowledge)",
+	"Java (Basic knowledge)",
+	"Matlab (Basic knowledge)",
+	"Python (Basic knowledge)",
+	"Bash (Basic knowledge)",
 	"CSS BEM convention",
 	"CSS Flexbox",
 	"CSS Grid",
+	"Semantic & accessible HTML",
 	"React",
-	"React Hooks",
 	"React Router",
 	"styled-components",
 	"Redux (Toolkit)",
 	"Redux-Saga",
-	"Promises, Async/Await",
-	"Working with API (fetch, axios)",
-	"Error handling",
 	"NPM",
+	"Yarn",
 	"Markdown",
 	"Git",
-	"GitHub Pull Requests & Reviews",
 	"Teamwork",
 	"Scrum",
 	"Trello",
+	"Jira",
 	"Responsive Web Design",
-	"Java (Basic knowledge)",
-	"Matlab (Basic knowledge)",
 	"Android SDK",
 	"Firebase",
-	"TypeScript"
+	"Linux",
+	"Wwise"
 ];
 
 export const toLearnList = [
 	"React Native",
+	"Lynx",
 	"Wordpress",
-	"C++",
-	"VST Programming",
-	"Software testing"
+	"Next.js"
 ];
