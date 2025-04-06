@@ -41,10 +41,8 @@ const darkTheme = {
 	...commonProperties
 };
 
-const initialTheme = { ...lightTheme, transition: "0" };
-
 export const themeMap = {
-	[ThemeType.Initial]: initialTheme,
+	[ThemeType.Initial]: lightTheme,
 	[ThemeType.Light]: lightTheme,
 	[ThemeType.Dark]: darkTheme
 };

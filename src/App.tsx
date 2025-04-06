@@ -15,7 +15,7 @@ const App = () => {
 
 	return (
 		<ThemeProvider theme={themeMap[themeState]}>
-			<GlobalStyle />
+			<GlobalStyle themeState={themeState} />
 			<About />
 			<main>
 				<List
