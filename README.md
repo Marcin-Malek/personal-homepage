@@ -2,7 +2,7 @@
 
 ## Demo
 
-https://marcin-malek.github.io/personal-homepage/
+https://marcinmalek.dev
 
 ## Description
 
