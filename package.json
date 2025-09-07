@@ -20,7 +20,7 @@
     "prebuild": "npm run lint",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit --watch",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build --cname marcinmalek.dev",
     "predeploy": "npm run build"
   },
   "eslintConfig": {
