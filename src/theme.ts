@@ -20,6 +20,8 @@ const lightTheme = {
 		themeSwitch: "#E5E5E5"
 	},
 	shadow: {
+		card: "0 16px 7px rgba(9, 10, 51, 0.02)",
+		cardHover: "0 16px 16px 12px rgba(9, 10, 51, 0.06)",
 		buttonFocus: "2px -2px 0px #8CC2FF, -2px 2px 0px #8CC2FF, 2px 2px 0px #8CC2FF, -2px -2px 0px #8CC2FF",
 		buttonClick: "inset 0 2px 0 #14462033"
 	},
@@ -37,6 +39,8 @@ const darkTheme = {
 		themeSwitch: "#6E6E6E"
 	},
 	shadow: {
+		card: "0 16px 7px rgba(9, 10, 51, 0.1)",
+		cardHover: "0 16px 16px 12px rgba(9, 10, 51, 0.16)",
 		buttonFocus: "2px -2px 0px #6D93BE, -2px 2px 0px #6D93BE, 2px 2px 0px #6D93BE, -2px -2px 0px #6D93BE",
 		buttonClick: "inset 0 2px 0 #14462033"
 	},

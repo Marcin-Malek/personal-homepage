@@ -3,13 +3,18 @@ import styled from "styled-components";
 export const StyledCard = styled.li`
     background: ${({ theme }) => theme.fillColor.card};
     border: 6px solid ${({ theme }) => theme.borderColor};
-    box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02), 0px 16px 58px rgba(9, 10, 51, 0.03);
+    box-shadow: ${({ theme }) => theme.shadow.card};
     border-radius: 4px;
     padding: 56px;
-    transition: border-color ${({ theme }) => theme.transition};
+    transition: 
+        border-color 1s ${({ theme }) => theme.transitionEasing}, 
+        transform 0.2s ${({ theme }) => theme.transitionEasing},
+        box-shadow 0.2s ${({ theme }) => theme.transitionEasing};
 
     &:hover {
         border-color: #0366D633;
+        transform: scale(1.02);
+        box-shadow: ${({ theme }) => theme.shadow.cardHover};
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {

@@ -18,6 +18,8 @@ declare module "styled-components" {
 			themeSwitch: string;
 		}
 		shadow: {
+			card: string;
+			cardHover: string;
 			buttonFocus: string;
 			buttonClick: string;
 		}

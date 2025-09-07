@@ -4,7 +4,7 @@ import Marker from "../img/marker.svg?react";
 export const ListWrapper = styled.section`
     padding: 32px;
     margin: 72px 0;
-    box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02), 0px 16px 58px rgba(9, 10, 51, 0.03);
+    box-shadow: ${({ theme }) => theme.shadow.card};
     border-radius: 4px;
     background-color: ${({ theme }) => theme.fillColor.card};
 
