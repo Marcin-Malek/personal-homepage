@@ -10,6 +10,7 @@ declare module "styled-components" {
 		};
 		fillColor: {
 			background: string;
+			backgroundShade: string;
 			card: string;
 			textPrimary: string;
 			textSecondary: string;

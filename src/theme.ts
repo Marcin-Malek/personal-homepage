@@ -11,7 +11,8 @@ const commonProperties = {
 
 const lightTheme = {
 	fillColor: {
-		background: "#FBFBFE",
+		background: "#FBFBFB",
+		backgroundShade: "#0366D6AA",
 		card: "#FFFFFF",
 		textPrimary: "#252525",
 		textSecondary: "#657486",
@@ -28,6 +29,7 @@ const lightTheme = {
 const darkTheme = {
 	fillColor: {
 		background: "#252525",
+		backgroundShade: "#2188FF77",
 		card: "#363636B8",
 		textPrimary: "#FFFFFF",
 		textSecondary: "#FFFFFF",
@@ -42,7 +44,6 @@ const darkTheme = {
 };
 
 export const themeMap = {
-	[ThemeType.Initial]: lightTheme,
 	[ThemeType.Light]: lightTheme,
 	[ThemeType.Dark]: darkTheme
 };

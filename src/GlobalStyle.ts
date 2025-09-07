@@ -16,9 +16,9 @@ export const GlobalStyle = createGlobalStyle<{ themeState: ThemeType }>`
         padding: 119px 14px 109px;
         margin: auto !important;
         word-break: break-word;
-        background-color: ${({ theme }) => theme.fillColor.background};
+        background: ${({ theme }) => `linear-gradient(300deg, ${theme.fillColor.background} 0%, ${theme.fillColor.backgroundShade} 500%)`};
+        background-attachment: fixed;
         color: ${({ theme }) => theme.fillColor.textPrimary};
-        transition: background-color ${({ theme, themeState }) => themeState === ThemeType.Initial ? "0" : theme.transition};
 
         @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) { 
             padding: 32px 14px;
