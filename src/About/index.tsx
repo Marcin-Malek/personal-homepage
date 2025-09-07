@@ -1,6 +1,5 @@
 import EnvelopeIcon from "../img/envelope.svg?react";
 import { Wrapper, Image, Caption, Header, Description } from "./styled";
-import { EmojiWrapper, Link } from "../common/styled";
 import ThemeSwitch from "./ThemeSwitch";
 import LinkButton from "../LinkButton";
 import photo from "../img/photo.jpg";
@@ -11,17 +10,10 @@ const About = () => (
 			src={photo}
 			alt="Marcin Małek" />
 		<ThemeSwitch />
-		<Caption>I am</Caption>
+		<Caption>Hi, I am</Caption>
 		<Header>Marcin Małek</Header>
 		<Description>
-			An enthusiastic programmer, who is currently a proud member of software development team at {}
-			<Link
-				href="https://ftd.aero/"
-				rel="noopener norefferer"
-				target="_blank">
-				FTD.aero
-			</Link>
-			<EmojiWrapper> ✈️</EmojiWrapper>.
+			A passionate software developer, currently exploring new opportunities and working on exciting personal projects.
 		</Description>
 		<LinkButton
 			link="mailto:marcinmalek01@gmail.com"
