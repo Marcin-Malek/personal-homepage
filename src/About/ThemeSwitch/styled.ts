@@ -31,7 +31,7 @@ export const Switch = styled.span`
     cursor: pointer;
     outline: 1px solid ${({ theme }) => theme.fillColor.textSecondary};
     background-color: ${({ theme }) => theme.fillColor.themeSwitch};
-    transition: background-color ${({ theme }) => theme.transition};
+    transition: background-color 1s ${({ theme }) => theme.transitionEasing};
 
     &:focus-within {
         outline: 2px solid ${({ theme }) => theme.fillColor.textSecondary};
@@ -49,7 +49,7 @@ export const BrightnessIcon = styled(Icon)<{$themeType: ThemeType}>`
     margin: 0 3px;
     border-radius: 50%;
     background-color: ${({ theme }) => theme.fillColor.textSecondary};
-    transition: ${({ theme }) => theme.transition};
+    transition: 1s ${({ theme }) => theme.transitionEasing};
 
     ${({ $themeType }) => $themeType === ThemeType.Dark && css`
         transform: translate(100%) rotate(0.5turn);

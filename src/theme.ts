@@ -2,7 +2,7 @@ import { ThemeType } from "./types";
 
 const commonProperties = {
 	borderColor: "#D1D5DA4D",
-	transition: "1s cubic-bezier(0.69, 0.15, 0.31, 0.85)",
+	transitionEasing: "cubic-bezier(0.69, 0.15, 0.31, 0.85)",
 	breakpoints: {
 		mobile: 767,
 		tablet: 1180

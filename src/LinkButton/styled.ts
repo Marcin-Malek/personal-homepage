@@ -16,7 +16,7 @@ export const StyledButton = styled.a`
     color: white;
     background-color: ${({ theme }) => theme.fillColor.main};
     border: 1px solid ${({ theme }) => theme.borderColor};
-    transition: box-shadow ${({ theme }) => theme.transition};
+    transition: box-shadow 1s ${({ theme }) => theme.transitionEasing};
 
     &:hover {
         box-shadow: ${({ theme }) => theme.shadow.buttonFocus};

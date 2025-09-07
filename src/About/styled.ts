@@ -1,4 +1,26 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const upwardsFlowIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const rtlFlowIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
 
 export const Wrapper = styled.header`
     display: grid;
@@ -47,6 +69,10 @@ export const Caption = styled.span`
     line-height: 130%;
     text-transform: uppercase;
     color: ${({ theme }) => theme.fillColor.textSecondary};
+    animation: ${rtlFlowIn} ${({ theme }) => theme.transitionEasing};
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
 `;
 
 export const Header = styled.h1`
@@ -56,6 +82,10 @@ export const Header = styled.h1`
     line-height: 46px;
     letter-spacing: 0.05em;
     margin: 12px 0 35px;
+    animation: ${rtlFlowIn} ${({ theme }) => theme.transitionEasing};
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         font-size: 22px;
@@ -72,6 +102,10 @@ export const Description = styled.p`
     letter-spacing: 0.05em;
     margin: 0 0 32px;
     color: ${({theme}) => theme.fillColor.textSecondary};
+    animation: ${upwardsFlowIn} ${({ theme }) => theme.transitionEasing};
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         font-size: 17px;
