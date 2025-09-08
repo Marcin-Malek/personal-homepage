@@ -12,7 +12,7 @@ const commonProperties = {
 const lightTheme = {
 	fillColor: {
 		background: "#FBFBFB",
-		backgroundShade: "#0366D6AA",
+		backgroundShade: "#6BA1F1",
 		card: "#FFFFFF",
 		textPrimary: "#252525",
 		textSecondary: "#657486",
@@ -31,7 +31,7 @@ const lightTheme = {
 const darkTheme = {
 	fillColor: {
 		background: "#252525",
-		backgroundShade: "#2188FF77",
+		backgroundShade: "#8ABDF3",
 		card: "#363636B8",
 		textPrimary: "#FFFFFF",
 		textSecondary: "#FFFFFF",
