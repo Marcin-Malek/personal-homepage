@@ -592,7 +592,7 @@ template {
         font-size: 18px;
         line-height: 140%;
     }
-`,vp=({link:l,img:i,text:c})=>ie.jsxs(_3,{href:l,children:[i,c]}),C3="/personal-homepage/assets/photo-CYH8I1I5.jpg",T3=()=>ie.jsxs(h3,{children:[ie.jsx(y3,{src:C3,alt:"Marcin Małek"}),ie.jsx(A3,{}),ie.jsx(p3,{children:"Hi, I am"}),ie.jsx(m3,{children:"Marcin Małek"}),ie.jsx(g3,{children:"A passionate software developer, currently exploring new opportunities and working on exciting personal projects."}),ie.jsx(vp,{link:"mailto:marcinmalek01@gmail.com",img:ie.jsx(s3,{style:{marginRight:"16px"}}),text:"Contact me"})]}),O3=l=>ee.createElement("svg",{width:9,height:9,viewBox:"0 0 9 9",fill:"none",xmlns:"http://www.w3.org/2000/svg",...l},ee.createElement("circle",{cx:4.5,cy:4.5,r:4.5,fill:"#0366D6"})),R3=ge.section`
+`,vp=({link:l,img:i,text:c})=>ie.jsxs(_3,{href:l,children:[i,c]}),C3="/assets/photo-CYH8I1I5.jpg",T3=()=>ie.jsxs(h3,{children:[ie.jsx(y3,{src:C3,alt:"Marcin Małek"}),ie.jsx(A3,{}),ie.jsx(p3,{children:"Hi, I am"}),ie.jsx(m3,{children:"Marcin Małek"}),ie.jsx(g3,{children:"A passionate software developer, currently exploring new opportunities and working on exciting personal projects."}),ie.jsx(vp,{link:"mailto:marcinmalek01@gmail.com",img:ie.jsx(s3,{style:{marginRight:"16px"}}),text:"Contact me"})]}),O3=l=>ee.createElement("svg",{width:9,height:9,viewBox:"0 0 9 9",fill:"none",xmlns:"http://www.w3.org/2000/svg",...l},ee.createElement("circle",{cx:4.5,cy:4.5,r:4.5,fill:"#0366D6"})),R3=ge.section`
     padding: 32px;
     margin: 72px 0;
     box-shadow: ${({theme:l})=>l.shadow.card};
