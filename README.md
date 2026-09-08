@@ -2,7 +2,7 @@
 
 ## Demo
 
-https://marcinmalek.dev
+https://marcinmalek.me
 
 ## Description
 

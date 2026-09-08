@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "type": "module",
   "private": true,
-  "homepage": "https://marcinmalek.dev",
+  "homepage": "https://marcinmalek.me",
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.1",
     "color-alpha": "^1.1.3",
@@ -20,7 +20,7 @@
     "prebuild": "npm run lint",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit --watch",
-    "deploy": "gh-pages -d build --cname marcinmalek.dev",
+    "deploy": "gh-pages -d build --cname marcinmalek.me",
     "predeploy": "npm run build"
   },
   "eslintConfig": {
